@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import './index.scss'
 import { Link } from 'react-router-dom';
 import Transfert from '../../images/transfert.svg';
-import Logo from '../../images/logo.svg';
+import Logo from '../../images/logo.png';
 import Facebook from '../../images/facebook.svg';
 import Insta from '../../images/insta.svg';
 import Map from '../../images/map.svg';

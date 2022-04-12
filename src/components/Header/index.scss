@@ -1,6 +1,11 @@
 @import '../../variables';
 
 .nav-container {
+
+    .logo {
+        width: 60px;
+    }
+    
     height: 72px;
     z-index: 90;
     width: 100%;
