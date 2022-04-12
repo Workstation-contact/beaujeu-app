@@ -22,7 +22,7 @@ const ComponentQuiz: FC<IComponentQuizProps> = (props) => {
   function getData() {
     ref.onSnapshot((QuerySnapshot) => {
 
-      const items = [];
+      const items = [] ;
       QuerySnapshot.forEach((doc)=> {
           items.push(doc.data())
       })
