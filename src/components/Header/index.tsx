@@ -19,9 +19,7 @@ const Header: FC = () => {
 
   return (
     <>
-
     
-
     <div className={`nav-container ${menuOpen ? "active" : ""} `}>
       <nav>
 
