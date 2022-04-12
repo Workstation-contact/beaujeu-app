@@ -2,14 +2,14 @@ import React from 'react';
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import firebase from './firebase';
-
 import Header from './components/Header';
 
 import HomePage from './pages/Home';
 import Musee from './pages/Musee';
 import Parametres from './pages/Parametres';
 import Quiz from './pages/Quiz';
+
+import firestore from 'firebase/firestore';
 
 
 function App() {

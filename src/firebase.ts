@@ -22,17 +22,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 
-try {
-  firebase.initializeApp(firebaseConfig);
-} catch (error) {
-  let errorMessage = "Failed to do something exceptional";
-  if (error instanceof Error) {
-    errorMessage = error.message;
-  }
-  console.log(errorMessage);
-}
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
 
 
 
-export default firebase;
+export default db;
 
