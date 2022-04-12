@@ -2,6 +2,8 @@ import React from 'react';
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import firebase from './firebase';
+
 import Header from './components/Header';
 
 import HomePage from './pages/Home';
@@ -11,6 +13,7 @@ import Quiz from './pages/Quiz';
 
 
 function App() {
+
   return (
     <div className="App">
 
