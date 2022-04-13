@@ -1,26 +1,68 @@
-import { QuerySnapshot } from 'firebase/firestore';
+import { getDocFromCache, getDocs, QuerySnapshot } from 'firebase/firestore';
 import React, { FC, useState, useEffect } from 'react';
 import { arrayBuffer } from 'stream/consumers';
 
-import db from '../../firebase';
+import db from '../../firebase'; 
+import { collection } from 'firebase/firestore'
+import { doc, getDoc,  onSnapshot } from "firebase/firestore";
 
-
+import firebase from "firebase/compat/app";
+import 'firebase/compat/database';
+import 'firebase/compat/firestore';
 
 export interface IComponentQuizProps {
-  items: [];
-  id: number; label: string; key: any
+  
 }
 
 const ComponentQuiz: FC<IComponentQuizProps> = (props) => {
 
-  const ref = db.collection("QCM")
-  console.log(ref);
+  const [datasotre, setDataStore] = useState([]);
+  const datasCollectionRef = db.collection("QCM");
 
-  const [data, setdata] = useState();
-  const [loader, setloader] = useState(true);
+  useEffect (() => {
 
-  function getData() {
+    const getDatas = async () => {
+        const data = await getDocs(datasCollectionRef);
+        // setDataStore(data.docs.map((doc) => ({...doc.data(),id: doc.id})))
+        
+        console.log(data);
+    }
+  
+    getDatas();
+  }, []);
+  // console.log(userDetails)
+  // const ref = db.collection("QCM")
+  // console.log(ref);
+
+
+  return (
+      <div className='quiz-component-page'>
+        
+      </div>
+  );
+};
+
+export default ComponentQuiz;
+
+
+/*
+
+const docRef = doc(db);
+    const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    console.log("Document data:", docSnap.data());
+  } else {
+    // doc.data() will be undefined in this case
+    console.log("No such document!");
+
+  
+  }
+
+function getData() {
     ref.onSnapshot((QuerySnapshot) => {
+
+      
 
       const items = [] ;
       QuerySnapshot.forEach((doc)=> {
@@ -37,17 +79,8 @@ const ComponentQuiz: FC<IComponentQuizProps> = (props) => {
     console.log(data);
   })
 
-  return (
-      <div className='quiz-component-page'>
-        
-      </div>
-  );
-};
 
-export default ComponentQuiz;
-
-
-/*const [info , setInfo] = useState([]);
+const [info , setInfo] = useState([]);
   
     // Start the fetch operation as soon as
     // the page loads
