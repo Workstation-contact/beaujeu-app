@@ -1,0 +1,45 @@
+.collection_slide {
+    display: flex;
+    overflow-y: hidden; 
+    overflow-y: scroll;
+    margin: 10vh;
+    
+  
+
+    img {
+        width: 400px;
+    }
+    
+
+}
+.collection_slide_img {
+    margin: 2vh;
+
+}
+
+h1 {
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 20px;
+     padding: 25px;
+}
+
+
+@media screen and (min-width: 390px ) and (max-width: 992px) {
+
+    h1 {
+        font-size: 19px;
+        margin-top: 2vh;
+
+    }
+
+    img {
+        width: 100%;
+    }
+
+}
+
+
+
+  
+ 
