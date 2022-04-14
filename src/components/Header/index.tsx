@@ -46,9 +46,11 @@ const Header: FC = () => {
                 <li>
                 <Link reloadDocument to="/parametres">Parametres</Link>
                 </li>
-
                 <li>
                 <Link reloadDocument to="/quiz">Quiz</Link>
+                </li>
+                <li>
+                <Link reloadDocument to="/pickquiz">Pick Quiz</Link>
                 </li>
             </div>
 
