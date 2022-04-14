@@ -22,17 +22,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 
-try {
-  firebase.initializeApp(firebaseConfig);
-} catch (error) {
-  let errorMessage = "Failed to do something exceptional";
-  if (error instanceof Error) {
-    errorMessage = error.message;
-  }
-  console.log(errorMessage);
-}
-
-
-
+firebase.initializeApp(firebaseConfig);
+const databaseRef = firebase.database().ref();
+export const todosRef = databaseRef.child("todos")
 export default firebase;
+
 

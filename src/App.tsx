@@ -10,6 +10,7 @@ import HomePage from './pages/Home';
 import Musee from './pages/Musee';
 import Parametres from './pages/Parametres';
 import Quiz from './pages/Quiz';
+import firestore from 'firebase/firestore';
 
 
 function App() {
