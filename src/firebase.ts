@@ -23,8 +23,12 @@ const firebaseConfig = {
 // Initialize Firebase
 
 firebase.initializeApp(firebaseConfig);
-const databaseRef = firebase.database().ref();
-export const todosRef = databaseRef.child("todos")
-export default firebase;
+var db = firebase.firestore();
+
+
+
+
+export default db;
+
 
 
