@@ -1,1 +1,185 @@
-@import '../../variables';
+@import '../../_variables.scss';
+
+
+// CSS ETAT AFFICHAGE
+.display-none{
+    display: none;
+}
+
+.display-block{
+    display: block;
+}
+
+
+// CSS VUE QUESTIONS
+.quiz-questions{
+    margin: 0 auto;
+    padding-top:7rem;
+    width: 75%;
+
+    .quiz-questions-title-container{
+        text-align: center;
+
+        h2, p{
+            margin-top: 2rem;
+        }
+    }
+
+    .quiz-questions-questions-container{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 7rem;
+
+        .quiz-questions-question-card{
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 5px 5px 17px 0px #cccccc;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 31%;
+            text-align: center;
+
+            &:hover{
+                box-shadow: 5px 5px 17px 0px #c0c0c0;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+// CSS VUE RESULTS
+.quiz-results{
+    margin: 0 auto;
+    padding-top:7rem;
+    width: 75%;
+
+    .quiz-results-title-container, .quiz-questions-results-container{
+        text-align: center;
+
+        h3{
+            margin-top: 60px;
+        }
+
+        h2{
+            font-size: 30px;
+        }
+    }
+
+    .quiz-questions-buttons-container{
+        display: flex;
+        flex-direction: column;
+        div{
+            display: flex;
+            justify-content: center;
+
+            &:nth-child(1){
+                div{
+                    border-radius: 20px;
+                    padding: 15px;
+                    box-shadow: 5px 5px 17px 0px #cccccc;
+                    width: 350px;
+                    margin-top: 60px;
+                    &:nth-of-type(1){
+                        background-color: $primary;
+                        margin-right: 10px;
+                    }
+                    &:nth-of-type(2){
+                        background-color: $secondary;
+                        color: white;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            div{
+                border-radius: 20px;
+                padding: 15px;
+                box-shadow: 5px 5px 17px 0px #cccccc;
+                width: 350px;
+                margin-top: 30px;
+                img{
+                    width: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .quiz-questions{
+        width: 75%;
+        padding-top: 50px;
+
+        .quiz-questions-title-container{
+            h1{
+                font-size: 25px;
+            }
+        }
+
+        .quiz-questions-questions-container{
+            flex-direction: column;
+            margin-top: 40px;
+
+            .quiz-questions-question-card{
+                width: 100%;
+                margin-bottom: 2.5rem;
+
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .quiz-results{
+        .quiz-questions-buttons-container{
+            div{
+                flex-direction: column;
+
+                &:nth-child(1){
+                    div{
+                        width: 100%;
+                        margin-top: 30px;
+                        &:nth-of-type(1){
+                            margin-right: 0px;
+                        }
+                        &:nth-of-type(2){
+                            margin-left: 0px;
+                        }
+                    }
+                }
+    
+                div{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px ) and (max-width: 992px) {
+    .quiz-questions{
+        width: 65%;
+
+        p{
+            font-size: 19px;
+        }
+
+        .quiz-questions-questions-container{
+            flex-direction: column;
+
+            .quiz-questions-question-card{
+                width: 100%;
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+}
