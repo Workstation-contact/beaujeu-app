@@ -9,12 +9,10 @@ import Map from '../../images/map.svg';
 
 
 const Header: FC = () => {
-
   const [menuOpen, setMenuOpen] = useState(false)
   const handleMenuOpen = () => {
     setMenuOpen(!menuOpen)
   }
-
   console.log(menuOpen)
 
   return (

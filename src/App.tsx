@@ -11,6 +11,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import HomePage from './pages/Home';
 import Parametres from './pages/Parametres';
 import Quiz from './pages/Quiz';
+import firestore from 'firebase/firestore';
 
 function App() {
 
