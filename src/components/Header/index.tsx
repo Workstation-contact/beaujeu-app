@@ -9,12 +9,10 @@ import Map from '../../images/map.svg';
 
 
 const Header: FC = () => {
-
   const [menuOpen, setMenuOpen] = useState(false)
   const handleMenuOpen = () => {
     setMenuOpen(!menuOpen)
   }
-
   console.log(menuOpen)
 
   return (
@@ -43,7 +41,7 @@ const Header: FC = () => {
                 <Link reloadDocument to="/" className="logo-container"><img className='logo' src={Logo} alt="Logo"/></Link>
                 </li>
                 <li>
-                <Link reloadDocument to="/musee">Musee</Link>
+                <a href="http://beaujeu.reseaudesvilles.fr/fr/information/97744/musee-marius-audin">Musee</a>
                 </li>
                 <li>
                 <Link reloadDocument to="/parametres">Parametres</Link>
@@ -58,19 +56,19 @@ const Header: FC = () => {
 
             <div className="nav-right">
                 <li>
-                  <a href='https://www.linkedin.com/in/matthieupollet-websitecreator/' className=""><img className='facebook' src={Facebook} alt="Facebook"/></a>
+                  <a href='https://www.facebook.com/' className=""><img className='facebook' src={Facebook} alt="Facebook"/></a>
                 </li>
 
                 <li>
-                  <a href='https://www.linkedin.com/in/matthieupollet-websitecreator/' className=""><img className='insta' src={Insta} alt="Instagram"/></a>
+                  <a href='https://www.instagram.com/' className=""><img className='insta' src={Insta} alt="Instagram"/></a>
                 </li>
 
                 <li>
-                  <a href='https://www.linkedin.com/in/matthieupollet-websitecreator/' className=""><img className='map' src={Map} alt="Voir sur la carte"/></a>
+                  <a href='https://www.google.com/maps?q=52+Place+de+l%27H%C3%B4tel+de+Ville+69+430+Beaujeu&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiRubWC3ZP3AhVSQBoKHd_eAScQ_AUoAXoECAEQAw' className=""><img className='map' src={Map} alt="Voir sur la carte"/></a>
                 </li>
 
                 <li>
-                  <a href='https://www.linkedin.com/in/matthieupollet-websitecreator/' className="transfert"><img className='linkedin' src={Transfert} alt="Transfert"/></a>
+                  <a href='#' className="transfert"><img className='linkedin' src={Transfert} alt="Transfert"/></a>
                 </li>
             </div>
         </ul>

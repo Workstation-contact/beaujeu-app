@@ -13,6 +13,19 @@ body {
   color: $dark;
 }
 
+.lottie {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  line-height: 100vh;
+}
+
+.parametres-page {
+  display: flex;
+  justify-content: center;
+  line-height: 90vh;
+}
+
 *,
 *::before,
 *::after {
@@ -63,6 +76,22 @@ select {
   font: inherit;
 }
 
-.home-page {
+.home-page>div {
   overflow: hidden;
+  height: 100vh;
+  background: white;
+
+}
+
+.Loader{
+  transform: translate(-50%, 0px);
+  position: fixed;
+  z-index: 99;
+  bottom: 20%;
+  left: 50%;
+}
+
+.load{
+  width: 100px;
+  height: 100px;
 }

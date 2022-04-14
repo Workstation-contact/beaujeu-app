@@ -7,7 +7,7 @@ const Parametres: FC<IParametresProps> = (props) => {
 
   return (
       <div className='parametres-page'>
-        
+        <h1>Paramètres détails</h1>
       </div>
   );
 };
