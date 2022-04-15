@@ -53,24 +53,24 @@ const ComponentQuiz: FC<IComponentQuizProps> = (props) => {
 
         {/* BLOC TITLE */}
         <div className='quiz-questions-title-container'>
-          <h1>NOM DE LA PIERRE</h1>
+          <h1>Linteau de Chasse</h1>
           <h2>Question n° 1</h2>
-          <p>Ceci est une question, ceci est-ce réellement une question ?</p>
+          <p>Qu'est ce qui est sculpté sur le Linteau ?</p>
         </div>
 
         {/* BLOC QUESTION CARDS */}
         <div className='quiz-questions-questions-container'>
           <div onClick={handleResultsOpen} className='quiz-questions-question-card'>
             <h3>A.</h3>
-            <p>Ceci est une réponse à la question posée précédemment.</p>
+            <p>3 personnes et un chat</p>
           </div>
           <div onClick={handleResultsOpen} className='quiz-questions-question-card'>
             <h3>B.</h3>
-            <p>Ceci est une réponse à la question posée précédemment.</p>
+            <p>2 personnes, 1 Cavalier et un faucon</p>
           </div>
           <div onClick={handleResultsOpen} className='quiz-questions-question-card'>
           <h3>C.</h3>
-          <p>Ceci est une réponse à la question posée précédemment.</p>
+          <p>2 Fermier et une vache</p>
           </div>
         </div>
       </div>

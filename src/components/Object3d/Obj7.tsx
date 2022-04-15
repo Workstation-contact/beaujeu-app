@@ -8,6 +8,7 @@ import { Canvas } from '@react-three/fiber'
 import Timer from '../Timer'
 import Lottie from "lottie-react";
 import loading from "../lottie/loading.json";
+import  { Navigate, Route, useNavigate } from 'react-router-dom'
 
 
 type GLTFResult = GLTF & {
@@ -610,41 +611,52 @@ useGLTF.preload('/obj7.glb')
 function ClickityClick(props:any) {
   const snap = useSnapshot(state)
   let button;
-  let obj;   
+  let instruction;   
   const updateName = (name: boolean):void => {
     state.timerEnd = name
     console.log(state.timerEnd)
 }
   if(state.break && !state.timerEnd){
-    button = <Timer time={30} updateName={updateName}/>;
+    button = <Timer time={90} updateName={updateName}/>;
   } else if(state.timerEnd){
-    button=<LaunchGame/>
+     let url = window.location;
+     window.location.href = url + 'quiz'
+
   } else{
     button=<LaunchGame/>
+    instruction=<Instruction/>
   }
 
 
   return (
     <div className="Loader">
       {button}
-      {/* {obj} */}
+      {instruction}
     </div>
   );
 
 }
 
-
-
-
-function LaunchGame(props:any) {
+function Instruction(props:any) {
   return (
   <p>Cliquez sur le rocher pour commencer l'expérience</p>
   );
 }
 
 
+
+function LaunchGame(props:any) {
+  return (
+    <div className='instruction'>
+      <p>Vous disposez de 90 secondes pour observer le Linteau de la chasse sculpté au Xe siècle</p>
+      <p>Une fois ce temps écoulé vous serez redirigez vers un questionnaire</p>
+    </div>
+  );
+}
+
+
 function Loader() {
-  const { progress } = useProgress()
+  const { progress } = useProgress();
   return <Html center>
     <div className='load'>
     <Lottie animationData={loading}/>
@@ -654,6 +666,7 @@ function Loader() {
 
 
 export default function Rock(){
+
   return(
     <div>
     <Canvas shadows camera={{position:[10,10,0]}}  >
@@ -689,4 +702,8 @@ export default function Rock(){
     <ClickityClick/>
     </div>
   )
+}
+
+function useHistory() {
+  throw new Error('Function not implemented.')
 }
