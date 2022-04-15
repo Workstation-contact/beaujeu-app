@@ -89,8 +89,12 @@ select {
   z-index: 99;
   bottom: 20%;
   left: 50%;
+  text-align: center;
 }
 
+.instruction{
+  margin-bottom: 20px;
+}
 .load{
   width: 100px;
   height: 100px;
