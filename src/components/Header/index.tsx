@@ -44,13 +44,7 @@ const Header: FC = () => {
                 <a href="http://beaujeu.reseaudesvilles.fr/fr/information/97744/musee-marius-audin">Musee</a>
                 </li>
                 <li>
-                <Link reloadDocument to="/parametres">Parametres</Link>
-                </li>
-                <li>
                 <Link reloadDocument to="/quiz">Quiz</Link>
-                </li>
-                <li>
-                <Link reloadDocument to="/pickquiz">Pick Quiz</Link>
                 </li>
             </div>
 
